@@ -3,7 +3,7 @@
 ## Anbieter
 
 **destination.one GmbH** – Hersteller von one.data. Diese Extension gehört zum offiziellen Katalog
-[one-data-extensions](https://github.com/audioholic-78/one-data-extensions) und wird mit one.data gepflegt.
+[onedata-ext](https://github.com/audioholic-78/onedata-ext) und wird mit one.data gepflegt.
 
 - Web: [www.destination.one](https://www.destination.one)
 - Kontakt: [info@destination.one](mailto:info@destination.one)

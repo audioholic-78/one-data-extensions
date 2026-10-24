@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.osm",
   "name": "OpenStreetMap (Overpass)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Touristische Orte aus OpenStreetMap über eine Overpass-Abfrage übernehmen.",

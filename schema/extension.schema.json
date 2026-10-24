@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/audioholic-78/one-data-extensions/main/schema/extension.schema.json",
+  "$id": "https://raw.githubusercontent.com/audioholic-78/onedata-ext/main/schema/extension.schema.json",
   "title": "one.data Extension-Manifest (extension.json, manifest_version 1)",
   "type": "object",
   "required": ["manifest_version", "id", "name", "version", "kind", "publisher"],

@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.import.tdh",
   "name": "Tourismus-Datenhub TDH (XML)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "kind": "import_format",
   "runtime": "declarative",
   "summary": "Migration aus dem Tourismus-Datenhub: XML-Exportdateien (Element item) übernehmen.",

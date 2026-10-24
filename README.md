@@ -1,10 +1,10 @@
-# one-data-extensions – offizieller Katalog des one.data marketplace
+# onedata-ext – offizieller Katalog des one.data marketplace
 
 Dieses Repo enthält die Extensions von destination.one für den **one.data marketplace** in one.data. Jede Extension liegt in
 einem eigenen Ordner und wird einzeln installiert – über den Link auf den Unterordner:
 
 ```
-https://github.com/audioholic-78/one-data-extensions/tree/main/connectors/outdooractive
+https://github.com/audioholic-78/onedata-ext/tree/main/connectors/outdooractive
 ```
 
 | Ordner | Art | Inhalt |
