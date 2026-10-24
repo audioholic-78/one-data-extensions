@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.dtp",
   "name": "Digitalize the Planet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Öffnungszeiten mit Digitalize the Planet abgleichen.",

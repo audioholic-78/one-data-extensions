@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.import.damas",
   "name": "DAMAS (XML)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "import_format",
   "runtime": "declarative",
   "summary": "Migration aus DAMAS: XML-Exportdateien (Element object) ins Staging übernehmen.",

@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.toubiz",
   "name": "mein.toubiz",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Artikel (POI, Gastronomie, Veranstaltungen) aus mein.toubiz abrufen.",

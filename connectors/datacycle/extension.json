@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.datacycle",
   "name": "DataCycle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "JSON-LD-Endpunkte aus DataCycle mit Delta-Abruf übernehmen.",

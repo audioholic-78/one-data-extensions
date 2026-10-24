@@ -1,6 +1,6 @@
-# one-data-extensions – offizieller Katalog des od marketplace
+# one-data-extensions – offizieller Katalog des one.data marketplace
 
-Dieses Repo enthält die Extensions von destination.one für den **od marketplace** in one.data. Jede Extension liegt in
+Dieses Repo enthält die Extensions von destination.one für den **one.data marketplace** in one.data. Jede Extension liegt in
 einem eigenen Ordner und wird einzeln installiert – über den Link auf den Unterordner:
 
 ```

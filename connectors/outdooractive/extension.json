@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.outdooractive",
   "name": "Outdooractive",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Touren und Outdoor-Inhalte aus einem Outdooractive-Projekt übernehmen.",

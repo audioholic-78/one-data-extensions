@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.regiondo",
   "name": "Regiondo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Buchbare Erlebnisse und Produkte aus Regiondo übernehmen.",

@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.export.damas",
   "name": "DAMAS-XML",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "kind": "export_format",
   "runtime": "builtin",
   "builtin": "xml_damas",
