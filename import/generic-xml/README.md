@@ -14,6 +14,10 @@ Beliebige XML-Dateien: Datensatz-Element und ID-Pfad sind beim Hochladen frei w�
 
 ## Beschreibung
 
+![Format in der Datenmigration auswählen](screenshots/01-datenmigration.png)
+
+![Ablauf](screenshots/02-ablauf.png)
+
 Unter *Administration → Datenmigration* das Format wählen und die Datei hochladen. Die Datensätze landen quellgetreu im Staging; danach eine Mapping-Version wählen und importieren.
 
 **Hinweis:** Datensatz-Element und ID-Pfad beim Hochladen angeben.

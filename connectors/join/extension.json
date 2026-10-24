@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.join",
   "name": "JOIN",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Stellenangebote aus JOIN als Artikel übernehmen.",

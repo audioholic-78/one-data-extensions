@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.n8n",
   "name": "n8n / Push-Eingang",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Beliebige Daten über einen n8n-Flow per Push-Eingang liefern.",

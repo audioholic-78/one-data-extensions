@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.destination-one",
   "name": "destination.one",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Datensätze aus destination.one (one.meta) über die REST-Suche übernehmen.",

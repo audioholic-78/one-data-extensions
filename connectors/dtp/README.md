@@ -14,6 +14,10 @@
 
 ## Beschreibung
 
+![Konnektor aus der Vorlage anlegen](screenshots/01-konnektor.png)
+
+![Ablauf](screenshots/02-ablauf.png)
+
 Beim Anlegen unter *Administration → Konnektoren* ist die Konfiguration vorbelegt. Platzhalter in Großbuchstaben (z. B. `PROJEKT`, `INSTANZ`) ersetzen und Zugangsdaten nur als **Name eines Secrets** (`credentials_ref`) hinterlegen.
 
 **Hinweis:** Öffnungszeiten-Abgleich; Endpunkt laut Vertrag.

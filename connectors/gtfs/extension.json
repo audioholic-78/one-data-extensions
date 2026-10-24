@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.gtfs",
   "name": "Open Data ÖPNV (VBB)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Haltestellen des Verkehrsverbunds Berlin-Brandenburg übernehmen.",

@@ -14,6 +14,10 @@ Lift- und Ticketdaten von SkiData per Push-Lieferung empfangen.
 
 ## Beschreibung
 
+![Konnektor aus der Vorlage anlegen](screenshots/01-konnektor.png)
+
+![Ablauf](screenshots/02-ablauf.png)
+
 Dieser Konnektor ruft selbst nichts ab: Unter *Konnektoren* ein **Ingest-Token** erzeugen und die Daten per `POST /v1/connectors/{id}/ingest` (Header `X-Ingest-Token`) liefern.
 
 **Hinweis:** Lieferung per Push (n8n) an den Ingest-Endpunkt.

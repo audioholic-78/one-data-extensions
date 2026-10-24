@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.export.tdh",
   "name": "TDH-XML",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "export_format",
   "runtime": "builtin",
   "builtin": "xml_tdh",

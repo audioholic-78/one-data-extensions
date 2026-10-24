@@ -14,6 +14,10 @@ Beliebige Daten über einen n8n-Flow per Push-Eingang liefern.
 
 ## Beschreibung
 
+![Konnektor aus der Vorlage anlegen](screenshots/01-konnektor.png)
+
+![Ablauf](screenshots/02-ablauf.png)
+
 Dieser Konnektor ruft selbst nichts ab: Unter *Konnektoren* ein **Ingest-Token** erzeugen und die Daten per `POST /v1/connectors/{id}/ingest` (Header `X-Ingest-Token`) liefern.
 
 **Hinweis:** Ingest-Token erzeugen und im n8n-HTTP-Knoten verwenden.

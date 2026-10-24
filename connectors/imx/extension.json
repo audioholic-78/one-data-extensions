@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "de.destination-one.connector.imx",
   "name": "imx.Platform",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "kind": "connector",
   "runtime": "declarative",
   "summary": "Objekte aus der imx.Platform (infomax) mit Paging übernehmen.",

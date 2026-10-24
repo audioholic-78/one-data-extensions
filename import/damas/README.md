@@ -14,6 +14,10 @@ Migration aus DAMAS: XML-Exportdateien (Element object) ins Staging übernehmen.
 
 ## Beschreibung
 
+![Format in der Datenmigration auswählen](screenshots/01-datenmigration.png)
+
+![Ablauf](screenshots/02-ablauf.png)
+
 Unter *Administration → Datenmigration* das Format wählen und die Datei hochladen. Die Datensätze landen quellgetreu im Staging; danach eine Mapping-Version wählen und importieren.
 
 **Hinweis:** Exportdatei aus DAMAS hochladen.
