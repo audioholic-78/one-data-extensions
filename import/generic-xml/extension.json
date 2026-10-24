@@ -1,0 +1,32 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.import.generic-xml",
+  "name": "Generisches XML",
+  "version": "1.0.0",
+  "kind": "import_format",
+  "runtime": "declarative",
+  "summary": "Beliebige XML-Dateien: Datensatz-Element und ID-Pfad sind beim Hochladen frei wählbar.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "migration",
+    "xml"
+  ],
+  "data_egress": false,
+  "import": {
+    "parser": "xml",
+    "options": {
+      "record_element": "item",
+      "id_path": "@id"
+    },
+    "hint": "Datensatz-Element und ID-Pfad beim Hochladen angeben",
+    "accept": ".xml,application/xml"
+  }
+}

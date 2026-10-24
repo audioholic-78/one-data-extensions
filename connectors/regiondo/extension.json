@@ -1,0 +1,37 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.regiondo",
+  "name": "Regiondo",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Buchbare Erlebnisse und Produkte aus Regiondo übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "regiondo",
+    "config": {
+      "url": "https://api.regiondo.com/v1/products?limit=250",
+      "items_path": "data",
+      "id_path": "product_id",
+      "auth": {
+        "type": "header",
+        "name": "X-API-ID"
+      }
+    },
+    "hint": "Public/Private Key (HMAC) über vorgeschalteten n8n-Flow oder Header"
+  }
+}

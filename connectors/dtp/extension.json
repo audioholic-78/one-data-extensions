@@ -1,0 +1,36 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.dtp",
+  "name": "Digitalize the Planet",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Öffnungszeiten mit Digitalize the Planet abgleichen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "dtp",
+    "config": {
+      "url": "https://api.digitalize-the-planet.org/opening-hours",
+      "items_path": "data",
+      "id_path": "id",
+      "auth": {
+        "type": "bearer"
+      }
+    },
+    "hint": "Öffnungszeiten-Abgleich; Endpunkt laut Vertrag"
+  }
+}

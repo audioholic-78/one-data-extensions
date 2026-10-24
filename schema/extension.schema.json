@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/audioholic-78/one-data-extensions/main/schema/extension.schema.json",
+  "title": "one.data Extension-Manifest (extension.json, manifest_version 1)",
+  "type": "object",
+  "required": ["manifest_version", "id", "name", "version", "kind", "publisher"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "manifest_version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9.-]{2,99}$", "description": "Eindeutige ID, eigene Domain rückwärts, z. B. de.meinefirma.mein-format" },
+    "name": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+(-[0-9A-Za-z.-]+)?$", "description": "SemVer ohne v; muss zum Git-Tag vX.Y.Z passen" },
+    "kind": { "enum": ["import_format", "connector", "export_format"] },
+    "runtime": { "enum": ["declarative", "remote", "builtin"], "default": "declarative" },
+    "summary": { "type": "string", "description": "Fallback für die Kurzbeschreibung, wenn README.md keinen Abschnitt hat" },
+    "publisher": {
+      "type": "object",
+      "required": ["name"],
+      "properties": { "name": { "type": "string" }, "url": { "type": "string", "format": "uri" }, "email": { "type": "string" } }
+    },
+    "license": { "type": "string" },
+    "homepage": { "type": "string", "format": "uri" },
+    "requires": { "type": "object", "additionalProperties": { "type": "string" } },
+    "categories": { "type": "array", "items": { "type": "string" } },
+    "data_egress": { "type": "boolean", "description": "true, wenn Daten one.data verlassen (Pflicht bei runtime remote)" },
+    "config_schema": { "type": "object", "description": "JSON-Schema der Einstellungen je Instanz; Zugangsdaten nur als *_ref" },
+    "import": {
+      "type": "object",
+      "properties": {
+        "parser": { "enum": ["csv", "xml", "json"] },
+        "source_system": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_.:-]*$" },
+        "options": { "type": "object", "description": "csv: delimiter, id_path, type_path, skip_empty · xml: record_element, id_path, type_path · json: items_path, id_path, type_path" },
+        "mapping": { "type": "string", "description": "Pfad zur MappingEngine-Definition im Paket" },
+        "sample": { "type": "string" },
+        "accept": { "type": "string" },
+        "format_key": { "type": "string", "pattern": "^[a-z][a-z0-9_]{1,39}$" },
+        "hint": { "type": "string" }
+      }
+    },
+    "connector": {
+      "type": "object",
+      "properties": {
+        "base_kind": { "enum": ["http_json", "xml", "ogc_features", "push"] },
+        "source_system": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_.:-]*$" },
+        "config": { "type": "object" },
+        "mapping": { "type": "string" },
+        "hint": { "type": "string" }
+      }
+    },
+    "export": {
+      "type": "object",
+      "properties": {
+        "format_key": { "type": "string", "pattern": "^[a-z][a-z0-9_]{1,39}$" },
+        "template": { "type": "string", "description": "Scriban-Vorlage im Paket" },
+        "content_type": { "type": "string" },
+        "extension": { "type": "string", "pattern": "^[a-z0-9]{1,8}$" },
+        "sample": { "type": "string" }
+      }
+    },
+    "remote": {
+      "type": "object",
+      "required": ["base_url"],
+      "properties": { "base_url": { "type": "string", "pattern": "^https://" }, "secret_ref": { "type": "string" } }
+    },
+    "builtin": { "enum": ["xml_damas", "xml_tdh"] }
+  }
+}

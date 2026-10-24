@@ -1,0 +1,38 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.imx",
+  "name": "imx.Platform",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Objekte aus der imx.Platform (infomax) mit Paging übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "imx",
+    "config": {
+      "url": "https://INSTANZ.imxplatform.de/api/objects?pageSize=500",
+      "items_path": "items",
+      "id_path": "id",
+      "next_path": "links.next",
+      "auth": {
+        "type": "header",
+        "name": "Authorization"
+      }
+    },
+    "hint": "Instanz-URL und Token je Mandant"
+  }
+}

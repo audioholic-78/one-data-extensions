@@ -1,0 +1,40 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.datacycle",
+  "name": "DataCycle",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "JSON-LD-Endpunkte aus DataCycle mit Delta-Abruf übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "datacycle",
+    "config": {
+      "url": "https://INSTANZ.datacycle.cloud/api/v4/endpoints/ENDPOINT",
+      "items_path": "@graph",
+      "id_path": "@id",
+      "type_path": "@type",
+      "next_path": "links.next",
+      "since_param": "filter[updated_since]",
+      "auth": {
+        "type": "query",
+        "name": "token"
+      }
+    },
+    "hint": "Endpoint-ID und Token; Delta über updated_since"
+  }
+}

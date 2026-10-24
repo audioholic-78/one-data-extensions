@@ -1,0 +1,34 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.osm",
+  "name": "OpenStreetMap (Overpass)",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Touristische Orte aus OpenStreetMap über eine Overpass-Abfrage übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "osm",
+    "config": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%3Bnode%5Btourism%5D(52.3,12.9,52.6,13.3)%3Bout%3B",
+      "items_path": "elements",
+      "id_path": "id",
+      "type_path": "tags.tourism"
+    },
+    "hint": "Overpass-Abfrage (Bounding Box, Tags) anpassen; ODbL-Lizenz beachten"
+  }
+}

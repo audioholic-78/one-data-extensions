@@ -1,0 +1,33 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.typo3",
+  "name": "TYPO3",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Inhalte (z. B. News) aus einer TYPO3-Website übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "typo3",
+    "config": {
+      "url": "https://www.example.de/api/news?type=1600",
+      "items_path": "data",
+      "id_path": "uid"
+    },
+    "hint": "Export-Endpunkt der TYPO3-Extension"
+  }
+}

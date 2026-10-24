@@ -1,0 +1,32 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.import.generic-json",
+  "name": "Generisches JSON",
+  "version": "1.0.0",
+  "kind": "import_format",
+  "runtime": "declarative",
+  "summary": "Beliebige JSON-Dateien (Liste oder Objekt mit Liste): Pfade beim Hochladen frei wählbar.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "migration",
+    "json"
+  ],
+  "data_egress": false,
+  "import": {
+    "parser": "json",
+    "options": {
+      "items_path": ".",
+      "id_path": "id"
+    },
+    "hint": "items_path und id_path beim Hochladen angeben",
+    "accept": ".json,application/json"
+  }
+}

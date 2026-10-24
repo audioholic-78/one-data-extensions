@@ -1,0 +1,25 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.export.damas",
+  "name": "DAMAS-XML",
+  "version": "1.0.0",
+  "kind": "export_format",
+  "runtime": "builtin",
+  "builtin": "xml_damas",
+  "summary": "Ausgabe im DAMAS-XML-Format für bestehende Abnehmer (Legacy-Schnittstelle).",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "export",
+    "xml",
+    "legacy"
+  ],
+  "data_egress": false
+}

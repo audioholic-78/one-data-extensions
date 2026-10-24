@@ -1,0 +1,33 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.wikidata",
+  "name": "Wikidata",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Objekte aus Wikidata über eine SPARQL-Abfrage übernehmen (CC0).",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "wikidata",
+    "config": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20%3Fitem%20%3FitemLabel%20WHERE%20%7B%20%3Fitem%20wdt%3AP131%20wd%3AQ1208%20.%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22de%22%20%7D%20%7D%20LIMIT%20500",
+      "items_path": "results.bindings",
+      "id_path": "item.value"
+    },
+    "hint": "SPARQL-Abfrage anpassen (CC0)"
+  }
+}

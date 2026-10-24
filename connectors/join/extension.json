@@ -1,0 +1,36 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.join",
+  "name": "JOIN",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Stellenangebote aus JOIN als Artikel übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "join",
+    "config": {
+      "url": "https://api.join.com/v2/jobs",
+      "items_path": ".",
+      "id_path": "id",
+      "auth": {
+        "type": "bearer"
+      }
+    },
+    "hint": "Stellenangebote als Artikel"
+  }
+}

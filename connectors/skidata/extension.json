@@ -1,0 +1,29 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.skidata",
+  "name": "SkiData",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Lift- und Ticketdaten von SkiData per Push-Lieferung empfangen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "push"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "push",
+    "source_system": "skidata",
+    "config": {},
+    "hint": "Lieferung per Push (n8n) an den Ingest-Endpunkt"
+  }
+}

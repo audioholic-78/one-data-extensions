@@ -1,0 +1,38 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.destination-one",
+  "name": "destination.one",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Datensätze aus destination.one (one.meta) über die REST-Suche übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "destination.one",
+    "config": {
+      "url": "https://meta.et4.de/rest.ashx/search/?experience=EXPERIENCE&type=POI&template=ET2014A.json&limit=500",
+      "items_path": "items",
+      "id_path": "global_id",
+      "type_path": "type",
+      "auth": {
+        "type": "query",
+        "name": "licensekey"
+      }
+    },
+    "hint": "Lizenzschlüssel als Secret hinterlegen, EXPERIENCE ersetzen"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.ogc",
+  "name": "OGC API – Features (Geodaten)",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Geodaten aus einer OGC-API-Features-Schnittstelle übernehmen (inkl. Geometrien).",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "ogc_features"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "ogc_features",
+    "source_system": "ogc",
+    "config": {
+      "url": "https://ogc-api.geobasis-bb.de",
+      "collection": "COLLECTION",
+      "limit": 500
+    },
+    "hint": "Collection wählen; Geometrie per Mapping \"geojson\""
+  }
+}

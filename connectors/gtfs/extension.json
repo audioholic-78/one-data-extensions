@@ -1,0 +1,33 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.gtfs",
+  "name": "Open Data ÖPNV (VBB)",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Haltestellen des Verkehrsverbunds Berlin-Brandenburg übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "vbb",
+    "config": {
+      "url": "https://v6.vbb.transport.rest/stops/nearby?latitude=52.4&longitude=13.06&results=100",
+      "items_path": ".",
+      "id_path": "id"
+    },
+    "hint": "Haltestellen; GTFS-Fahrplandaten über n8n-Flow"
+  }
+}

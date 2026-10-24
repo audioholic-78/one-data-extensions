@@ -1,0 +1,37 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.maptoolkit",
+  "name": "Maptoolkit / Toursprung",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Touren aus Maptoolkit (Toursprung) übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "maptoolkit",
+    "config": {
+      "url": "https://api.maptoolkit.net/tours",
+      "items_path": ".",
+      "id_path": "id",
+      "auth": {
+        "type": "query",
+        "name": "api_key"
+      }
+    },
+    "hint": "API-Key"
+  }
+}

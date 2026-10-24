@@ -1,0 +1,37 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.connector.outdooractive",
+  "name": "Outdooractive",
+  "version": "1.0.0",
+  "kind": "connector",
+  "runtime": "declarative",
+  "summary": "Touren und Outdoor-Inhalte aus einem Outdooractive-Projekt übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "konnektor",
+    "http_json"
+  ],
+  "data_egress": false,
+  "connector": {
+    "base_kind": "http_json",
+    "source_system": "outdooractive",
+    "config": {
+      "url": "https://www.outdooractive.com/api/project/PROJEKT/oois?display=verbose",
+      "items_path": "tour",
+      "id_path": "id",
+      "auth": {
+        "type": "query",
+        "name": "key"
+      }
+    },
+    "hint": "Projekt-Kennung und API-Key"
+  }
+}

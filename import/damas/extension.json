@@ -1,0 +1,34 @@
+{
+  "manifest_version": 1,
+  "id": "de.destination-one.import.damas",
+  "name": "DAMAS (XML)",
+  "version": "1.0.0",
+  "kind": "import_format",
+  "runtime": "declarative",
+  "summary": "Migration aus DAMAS: XML-Exportdateien (Element object) ins Staging übernehmen.",
+  "publisher": {
+    "name": "destination.one GmbH",
+    "url": "https://www.destination.one",
+    "email": "info@destination.one"
+  },
+  "license": "MIT",
+  "requires": {
+    "onedata": ">=1.35"
+  },
+  "categories": [
+    "migration",
+    "xml"
+  ],
+  "data_egress": false,
+  "import": {
+    "parser": "xml",
+    "source_system": "damas",
+    "options": {
+      "record_element": "object",
+      "id_path": "@id",
+      "type_path": "@type"
+    },
+    "hint": "Exportdatei aus DAMAS hochladen",
+    "accept": ".xml,application/xml"
+  }
+}
